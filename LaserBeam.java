@@ -30,7 +30,7 @@ public class LaserBeam extends Actor
                     player.damage(500);
                     player.knockback=true;
                     player.knockbackStrength=20;
-                    player.knockbackRotation=player.getRotation() - 180;
+                    player.knockbackRotation=player.getRotation();
                 }
             }
         }
