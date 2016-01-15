@@ -91,6 +91,9 @@ public class Boss3 extends Boss
 
             switch(curAttack){
                 case 0 ://charge laser
+                GreenfootSound effect = new GreenfootSound("laser_shoot.wav");
+                effect.setVolume(80);
+                effect.play();
                 chargeLaser(getRotation(), 50, getX(), getY());
                 break;
 
