@@ -137,7 +137,7 @@ public class Map extends World
      */
     public void displayGameCompletion () {
         if (player.curLevel == 4) {
-            addObject (new VictoryScreen(), 400, 400);
+            //addObject (new VictoryScreen(), 400, 400);
             gameCompleted = true;
         }
     }
@@ -335,7 +335,7 @@ public class Map extends World
                 }else if (name.equals("boss3")){
                     Boss3 t = new Boss3();
                     addObject(t,x,y);
-                    music = new GreenfootSound("boss_music.mp3");
+                    music = new GreenfootSound("finalboss_music.mp3");
                     bossBattle = true;
                     music.setVolume(40);
                 }
