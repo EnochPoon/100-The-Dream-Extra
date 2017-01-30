@@ -9,8 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LaserBeam extends Actor
 {
     int timer = 20;
-    public LaserBeam(){
+    int length = 0;
+    public LaserBeam(int length){
         getImage().scale(100, 5);
+        this.length = length;
     }
 
     /**
@@ -20,6 +22,11 @@ public class LaserBeam extends Actor
     public void act() 
     {
         if(timer-- == 0){
+            if(length==49){
+                GreenfootSound effect = new GreenfootSound("laser_shoot.wav");
+                effect.setVolume(90);
+                effect.play();
+            }
             
             getImage().scale(100, 50);
             if(isTouching(Player.class)){
@@ -28,7 +35,7 @@ public class LaserBeam extends Actor
                     player.damage(500);
                     player.knockback=true;
                     player.knockbackStrength=20;
-                    player.knockbackRotation=player.getRotation();
+                    player.knockbackRotation=player.getRotation()-180;
                 }
             }
         }

@@ -91,13 +91,14 @@ public class Boss3 extends Boss
 
             switch(curAttack){
                 case 0 ://charge laser
-                GreenfootSound effect = new GreenfootSound("laser_shoot.wav");
-                effect.setVolume(80);
-                effect.play();
+                
                 chargeLaser(getRotation(), 50, getX(), getY());
                 break;
 
                 case 1 ://spawn knifemen from spawners, create shield
+                GreenfootSound e = new GreenfootSound("spawn_effect.wav");
+                e.setVolume(80);
+                e.play();
                 List<Spawner> spawners = getWorld().getObjects(Spawner.class);
                 for(Spawner s : spawners){
                     s.activate(40);
@@ -131,7 +132,7 @@ public class Boss3 extends Boss
      */
     public void chargeLaser(int rotation, int length, int x, int y){
         if(length == 0)return;
-        LaserBeam beam = new LaserBeam();
+        LaserBeam beam = new LaserBeam(length);
         getWorld().addObject(beam, x, y);
         beam.setRotation(rotation);
         beam.move((length==50)? 50:99);

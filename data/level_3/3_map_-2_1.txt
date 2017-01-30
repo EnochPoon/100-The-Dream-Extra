@@ -231,17 +231,6 @@ rock 840 -415
 rock 328 -493
 rock 228 -378
 boss3 570 -553
-rock 294 -2
-rock 318 -1
-rock 355 1
-rock 392 1
-rock 429 0
-rock 456 1
-rock 487 1
-rock 538 -5
-rock 571 -3
-rock 516 -3
-rock 608 -4
 tree 309 882
 tree 555 958
 tree -131 974
