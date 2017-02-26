@@ -70,7 +70,6 @@ rock 686 653
 tree 448 579
 tree 494 492
 tree 605 417
-tree 481 370
 tree 621 315
 tree 293 541
 tree 290 416
@@ -82,7 +81,6 @@ tree 95 440
 tree 86 561
 tree 211 479
 dog 446 244
-dog 358 388
 dog 212 558
 dog 730 197
 dog 265 202
@@ -115,4 +113,6 @@ rock 824 460
 rock 862 330
 rock 848 453
 sandbag 705 487
-sandbag 342 347
+sandbag 299 328
+tree 533 408
+dog 373 505

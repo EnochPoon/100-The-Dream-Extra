@@ -101,7 +101,6 @@ rock 888 473
 rock 863 489
 mortar 388 144
 tree 174 248
-tree 418 360
 tree 196 482
 tree 574 219
 tree 608 537
@@ -127,7 +126,6 @@ gunman 392 241
 gunman 295 288
 sentry 584 646
 dog 259 149
-dog 372 419
 leftpassage -20 317
 rock -66 392
 rock -66 392
@@ -143,3 +141,5 @@ sentry 480 247
 mortar 442 147
 sandbag 589 467
 sandbag 179 395
+tree 351 298
+dog 458 504

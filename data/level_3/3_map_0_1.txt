@@ -162,7 +162,6 @@ mortar 355 491
 sentry 413 96
 sentry 357 232
 dog 374 427
-dog 446 380
 dog 533 449
 dog 168 532
 dog 301 370
@@ -190,3 +189,4 @@ bush 662 607
 bush 693 679
 bush 632 560
 rock 776 487
+dog 512 408

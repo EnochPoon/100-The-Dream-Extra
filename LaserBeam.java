@@ -10,6 +10,7 @@ public class LaserBeam extends Actor
 {
     int timer = 20;
     int length = 0;
+    boolean paused = false;
     public LaserBeam(int length){
         getImage().scale(100, 5);
         this.length = length;
@@ -21,13 +22,17 @@ public class LaserBeam extends Actor
      */
     public void act() 
     {
+        if(paused){
+            return;
+        }
         if(timer-- == 0){
-            if(length==49){
+
+            if(length == 49){
                 GreenfootSound effect = new GreenfootSound("laser_shoot.wav");
-                effect.setVolume(90);
+                effect.setVolume(100);
                 effect.play();
-            }
-            
+                }
+
             getImage().scale(100, 50);
             if(isTouching(Player.class)){
                 Player player = (Player)getWorld().getObjects(Player.class).get(0);

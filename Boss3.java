@@ -30,6 +30,7 @@ public class Boss3 extends Boss
         };
     int moveDelay = 1;
     boolean chasing = false;
+    Player p = new Player();
     
     /**
      * Act - do whatever the Boss3 wants to do. This method is called whenever
@@ -41,9 +42,9 @@ public class Boss3 extends Boss
         if(paused){
             return;
         }
-        Player p = (Player)getWorld().getObjects(Player.class).get(0);
+        p = (Player)getWorld().getObjects(Player.class).get(0);
         if(start){
-            hpBar = new BossHealthBar(200000, this);
+            hpBar = new BossHealthBar(250000, this);
             getWorld().addObject(hpBar, 400, 775);
             getWorld().addObject(new Text("Master", 18,Color.BLACK),400,775);
             start = false;
@@ -51,7 +52,7 @@ public class Boss3 extends Boss
             //add spawners and shrines
             getWorld().addObject(new Spawner(0), 0, 0);
             getWorld().addObject(new Spawner(1), 0, getWorld().getWidth());
-            getWorld().addObject(new Shrine(), getX(), getY());
+            getWorld().addObject(new Shrine(), 100, 100);
         }
         if(imageDelay-- <=0){
             imageDelay = (chasing)? 3:5;
@@ -60,7 +61,9 @@ public class Boss3 extends Boss
         if(getWorld().getObjects(Boss3shield.class).size() == 0 && 
         getWorld().getObjects(LaserBeam.class).size() == 0 && 
         getWorld().getObjects(ExplodeWarning.class).size() == 0){
-            turnTowards(p.getX(), p.getY());
+            if(canSeePlayer()){
+                turnTowards(p.getX(), p.getY());
+            }
         }else{
             image = 3;
             attackTimer = maxAttackTimer;
@@ -91,7 +94,7 @@ public class Boss3 extends Boss
 
             switch(curAttack){
                 case 0 ://charge laser
-                
+                turnTowards(p.getX(), p.getY());
                 chargeLaser(getRotation(), 50, getX(), getY());
                 break;
 
@@ -120,8 +123,8 @@ public class Boss3 extends Boss
 
         if(isTouching(Boss3shield.class)){
             hpBar.damage(-10);
-            if(hpBar.health >= 100000){
-                hpBar.health = 100000;
+            if(hpBar.health >= hpBar.startHealth){
+                hpBar.health = hpBar.startHealth;
             }
 
         }
@@ -161,15 +164,9 @@ public class Boss3 extends Boss
 
             if(p.curGameLevel<4){ //increase the player's game progress
                 p.curGameLevel=4;
-                //Text text = new Text("Congratulations! You have defeated the Master!", 24, Color.WHITE);
-                //getWorld().addObject(text,400,200);
             }
 
-            LevelExit exit = new LevelExit();
-            getWorld().addObject(exit, getX(), getY());
-            exit.removeBlocking();
-            p.curse = false;
-            getWorld().removeObject(this);
+            getWorld().addObject(new VictoryScreen(),900,900);
         }
     }
 
@@ -180,6 +177,9 @@ public class Boss3 extends Boss
         getWorld().getObjects(ExplodeWarning.class).size() == 0){
             move((chasing)?7:3);
             moveDelay = (chasing)?0:1;
+            if(isTouching(Impassable.class)){
+                turn(10);
+            }
         }
     }
 }

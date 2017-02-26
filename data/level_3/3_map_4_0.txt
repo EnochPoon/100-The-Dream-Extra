@@ -74,9 +74,6 @@ rock 224 309
 rock 263 337
 rock 288 351
 rock 318 369
-rock 357 397
-rock 388 416
-rock 419 440
 rock 454 466
 rock 476 483
 rock 507 506
@@ -84,10 +81,7 @@ rock 536 530
 rock 557 545
 rock 576 556
 rock 245 327
-rock 346 390
-rock 439 451
 sandbag 617 280
-sandbag 468 388
 sentry 573 340
 sentry 622 339
 dog 503 433
@@ -123,3 +117,8 @@ rock 54 590
 rock 55 616
 rock 85 635
 mortar 644 231
+rock 304 411
+rock 321 439
+rock 349 456
+rock 382 483
+rock 421 488

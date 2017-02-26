@@ -4,7 +4,9 @@ import greenfoot.*;
  * Instruction Screen Coding 
  * 
  * NOTE: All instruction screen images are supposed to animate; however, due to 
- * heap space errors, they are not implemented. 
+ * heap space errors, they are not implemented. Also, as of now - some instruction
+ * screen images (although gifs) do not animate. Some new revisions have been 
+ * made and there is currently no access to software to change to animated gif.
  * 
  * @author Gary Yu
  * @version January 13, 2016

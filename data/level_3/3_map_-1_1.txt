@@ -106,8 +106,6 @@ tree 362 176
 tree 527 174
 tree 619 174
 tree 515 286
-tree 446 336
-tree 388 392
 tree 516 366
 tree 360 504
 tree 371 602

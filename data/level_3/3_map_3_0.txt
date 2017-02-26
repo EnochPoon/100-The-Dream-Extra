@@ -71,7 +71,6 @@ rock 57 244
 rock 83 110
 tree 370 185
 tree 292 318
-tree 449 358
 tree 293 575
 tree 580 405
 tree 306 424
@@ -104,8 +103,6 @@ rock 556 55
 gunman 358 545
 gunman 334 495
 tree 621 215
-rock 438 433
-rock 437 451
 rock 434 485
 rock 429 548
 rock 429 605
@@ -115,3 +112,4 @@ rock 431 580
 rock 424 673
 rock 744 539
 rock 747 657
+tree 493 318

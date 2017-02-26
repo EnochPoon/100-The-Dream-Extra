@@ -59,6 +59,9 @@ public class Gunman extends Enemy
     public void shoot(){
         shootdelay++;
         if(shootdelay==100){
+            GreenfootSound effect = new GreenfootSound("p90_shoot.wav");
+            effect.setVolume(75);
+            effect.play();
             getWorld().addObject(new EnemyBullet(15,damage),getX(),getY());
             shootdelay=0;
         }

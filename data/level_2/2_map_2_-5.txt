@@ -11,15 +11,10 @@ bush 28 -100
 bush 28 900
 bush 60 -100
 bush 60 900
-bush 92 -100
 bush 92 900
-bush 124 -100
 bush 124 900
-bush 156 -100
 bush 156 900
-bush 188 -100
 bush 188 900
-bush 220 -100
 bush 220 900
 bush 252 -100
 bush 252 900
@@ -159,3 +154,5 @@ bush 721 229
 bush 719 256
 bush 726 278
 rock 755 539
+uppassage 140 -95
+bush 222 -97

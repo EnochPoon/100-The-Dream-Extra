@@ -21,7 +21,7 @@ public class ExplodeWarning extends Actor
     {
         Player p = (Player) getWorld().getObjects(Player.class).get(0);
         if(timer-- == 0){
-            getWorld().addObject(new EnemyExplosion(p, 1000), getX(), getY());
+            getWorld().addObject(new EnemyExplosion(p, 700), getX(), getY());
             getWorld().removeObject(this);
             return;
         }

@@ -85,7 +85,6 @@ rock -141 472
 bush 349 486
 bush 207 463
 mortar 226 299
-tree 420 377
 tree 608 495
 dog 210 427
 dog 320 451
@@ -113,3 +112,4 @@ bush 616 217
 bush 606 214
 rock 633 235
 rock 922 473
+tree 285 404

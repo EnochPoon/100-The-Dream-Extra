@@ -17,20 +17,21 @@ public class VictoryScreen extends Actor
     public void act() 
     {
         Map map = (Map) getWorld();
-        if (map.getGameCompletionStatus()){
-            scaleImage(4);
-        }
+        
+        scaleImage(4);
 
         setLocation(400,400);
         setImage ("VictoryScreen.png"); 
    
-        Greenfoot.delay(400);
+        Greenfoot.delay(500);
         Player player = (Player) getWorld().getObjects(Player.class).get(0);
         if (player !=null){ 
             //return to level selection
             player.saveData();
             ((Map) getWorld()).fadeOut();
             ((Map) getWorld()).music.stop();
+            Greenfoot.setWorld(new LevelSelector()); // Goes back to level selection screen 
+        }else{
             Greenfoot.setWorld(new LevelSelector()); // Goes back to level selection screen 
         }
         
@@ -46,9 +47,7 @@ public class VictoryScreen extends Actor
         if(cnt<=0) {
             return;
         }
-        GreenfootImage image = getImage();
-        image.scale(image.getWidth() * 2, image.getHeight() * 2);
-        setImage(image);
+        getImage().scale(getImage().getWidth() * 2, getImage().getHeight() * 2);
         Greenfoot.delay(1);
         cnt--;
         scaleImage(cnt);

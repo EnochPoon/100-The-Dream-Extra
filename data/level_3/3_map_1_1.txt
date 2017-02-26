@@ -114,7 +114,6 @@ rock 546 47
 sandbag 435 120
 mortar 446 61
 sentry 195 485
-sentry 445 329
 sentry 343 492
 dog 280 44
 dog 210 39
@@ -133,7 +132,6 @@ rock -41 340
 rock -27 309
 sandbag 215 532
 sandbag 473 533
-sandbag 495 393
 sandbag 82 225
 sandbag 343 216
 sandbag 476 217
@@ -167,3 +165,5 @@ gunman 444 165
 gunman 531 150
 mortar 608 43
 mortar 72 753
+sandbag 561 424
+sentry 565 285

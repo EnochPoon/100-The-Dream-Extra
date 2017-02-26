@@ -128,7 +128,6 @@ tree 392 630
 tree 658 559
 tree 348 506
 tree 346 395
-rock 444 386
 rock 449 415
 rock 456 468
 rock 462 496

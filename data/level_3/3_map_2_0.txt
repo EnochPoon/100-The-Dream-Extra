@@ -89,7 +89,6 @@ rock -46 394
 rock -46 434
 rock -30 470
 rock -24 290
-tree 386 379
 tree 235 153
 tree 606 148
 tree 612 741
@@ -174,3 +173,4 @@ rock -41 360
 rock -42 381
 rock -40 417
 rock -42 459
+tree 297 382
